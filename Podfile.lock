@@ -8,7 +8,7 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
-  - Networking (0.0.3):
+  - Networking (0.0.4):
     - Moya
     - Moya/RxSwift
     - RxSwift
@@ -75,7 +75,7 @@ SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Networking: 00e7d1036e4bfcf1f475472be3eb0b8111b10b7d
+  Networking: bb32eb2d76053c80eea4fce7529311269006e37b
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
