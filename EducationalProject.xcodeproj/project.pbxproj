@@ -13,6 +13,7 @@
 		530389A92600FC3000003493 /* APITokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530389A82600FC3000003493 /* APITokenPlugin.swift */; };
 		530389B12600FC9400003493 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530389B02600FC9400003493 /* Constants.swift */; };
 		530389BB260100BB00003493 /* PokeCardsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530389BA260100BB00003493 /* PokeCardsUseCase.swift */; };
+		53038B032601E9F000003493 /* Container+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53038B022601E9F000003493 /* Container+Helper.swift */; };
 		5373E7F825FF60630099D23F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5373E7F725FF60630099D23F /* AppDelegate.swift */; };
 		5373E7FA25FF60630099D23F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5373E7F925FF60630099D23F /* SceneDelegate.swift */; };
 		5373E7FC25FF60630099D23F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5373E7FB25FF60630099D23F /* ViewController.swift */; };
@@ -78,6 +79,7 @@
 		530389A82600FC3000003493 /* APITokenPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITokenPlugin.swift; sourceTree = "<group>"; };
 		530389B02600FC9400003493 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		530389BA260100BB00003493 /* PokeCardsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCardsUseCase.swift; sourceTree = "<group>"; };
+		53038B022601E9F000003493 /* Container+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Helper.swift"; sourceTree = "<group>"; };
 		5373E7F425FF60630099D23F /* EducationalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5373E7F725FF60630099D23F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5373E7F925FF60630099D23F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +212,22 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		53038B002601E9CB00003493 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53038B012601E9D200003493 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		53038B012601E9D200003493 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				53038B022601E9F000003493 /* Container+Helper.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5373E7EB25FF60630099D23F = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +266,7 @@
 		5373E84925FF89050099D23F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				53038B002601E9CB00003493 /* Common */,
 				5303899A2600F69000003493 /* Assembly */,
 				530389982600F68100003493 /* UseCases */,
 				5373E89025FFA5890099D23F /* Entries */,
@@ -589,6 +608,7 @@
 				530389BB260100BB00003493 /* PokeCardsUseCase.swift in Sources */,
 				5373E8AD25FFB0160099D23F /* CardsNetworkServiceProtocol.swift in Sources */,
 				530389A12600FA6D00003493 /* UseCaseProvider.swift in Sources */,
+				53038B032601E9F000003493 /* Container+Helper.swift in Sources */,
 				5373E89225FFA5980099D23F /* Pokemon.swift in Sources */,
 				5373E89625FFA7570099D23F /* Pokemons.swift in Sources */,
 			);
@@ -693,7 +713,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -748,7 +768,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
