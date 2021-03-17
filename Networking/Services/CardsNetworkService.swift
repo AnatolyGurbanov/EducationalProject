@@ -20,7 +20,7 @@ class CardsNetworkServiceImpl: Domain.CardsNetworkServiceProtocol {
         ])
     }
     
-    func fetchPokemonCards() -> Single<Domain.Pokemons> {
+    func fetchPokemonCards() -> Single<Pokemons> {
         return provider.rx.request(.cards)
             .filterSuccessfulStatusCodes()
             .map(Domain.Pokemons.self)
@@ -34,7 +34,7 @@ class CardsNetworkServiceImpl: Domain.CardsNetworkServiceProtocol {
             })
     }
     
-    func fetchPokemonCard(with id: String) -> Single<Domain.Pokemon> {
+    func fetchPokemonCard(with id: String) -> Single<Pokemon> {
         return provider.rx.request(.cardsID(id: id))
             .filterSuccessfulStatusCodes()
             .map(Domain.Pokemon.self)

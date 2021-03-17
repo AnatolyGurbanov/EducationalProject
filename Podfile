@@ -23,14 +23,12 @@ target 'EducationalProject' do
 end
 
 target 'Domain' do
-  project 'EducationalProject.xcodeproj'
   rxSwift
   moya
   swinject
 end
 
 target 'Networking' do
-  project 'EducationalProject.xcodeproj'
   rxSwift
   swinject
   moya
