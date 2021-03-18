@@ -32,10 +32,12 @@ def snapkit
 end
 
 def core_pods
-    pod "Networking", :path => "./Modules/Networking"
+    pod "Networking", :path => "Modules/Networking"
 end
 
 target 'EducationalProject' do
+  use_frameworks!
+  inherit! :search_paths
   core_pods
   external_pods
   swinject

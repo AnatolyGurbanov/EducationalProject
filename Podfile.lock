@@ -8,7 +8,7 @@ PODS:
   - Moya/RxSwift (14.0.0):
     - Moya/Core
     - RxSwift (~> 5.0)
-  - Networking (0.0.4):
+  - Networking (0.0.1):
     - Moya
     - Moya/RxSwift
     - RxSwift
@@ -42,7 +42,7 @@ PODS:
 DEPENDENCIES:
   - Moya
   - Moya/RxSwift
-  - Networking (from `./Modules/Networking`)
+  - Networking (from `Modules/Networking`)
   - RxCocoa
   - RxDataSources
   - RxFeedback
@@ -69,13 +69,13 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Networking:
-    :path: "./Modules/Networking"
+    :path: Modules/Networking
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Networking: bb32eb2d76053c80eea4fce7529311269006e37b
+  Networking: 80fc20e124231b7788cc13fd49283a06b390a52a
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
@@ -86,6 +86,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 3f34a1324fb4eb50daae1144ec9349aafc340923
+PODFILE CHECKSUM: cb0668760a33b705e78f0c548d0e3b058d5f032a
 
 COCOAPODS: 1.10.1
