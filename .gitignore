@@ -1,14 +1,3 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/xcode,swift,swiftpackagemanager,swiftpm
-# Edit at https://www.toptal.com/developers/gitignore?templates=xcode,swift,swiftpackagemanager,swiftpm
-
-### CocoaPods ###
-## CocoaPods GitIgnore Template
-
-# CocoaPods
-Pods/
-
-### Swift ###
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
@@ -46,41 +35,24 @@ timeline.xctimeline
 playground.xcworkspace
 
 # Swift Package Manager
+#
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
 # Packages/
 # Package.pins
 # Package.resolved
 # *.xcodeproj
+#
 # Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
 # hence it is not needed unless you have added a package configuration file to your project
 # .swiftpm
 
 .build/
 
-# Carthage
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
+# CocoaPods
+Pods/
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
 
-Carthage/Build/
-
-
-### SwiftPackageManager ###
-Packages
-xcuserdata
-*.xcodeproj
-
-
-### SwiftPM ###
-
-
-## Gcc Patch
-/*.gcno
-
-### Xcode Patch ###
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
-**/xcshareddata/WorkspaceSettings.xcsettings
-
-**/xcschemes/xcschememanagement.plist
+# Accio dependency management
+Dependencies/
+.accio/
