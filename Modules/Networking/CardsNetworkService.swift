@@ -10,7 +10,12 @@ import Foundation
 import Moya
 import RxSwift
 
-class CardsNetworkServiceImpl: Domain.CardsNetworkServiceProtocol {
+public protocol CardsNetworkServiceProtocol {
+    func fetchPokemonCards() -> Single<Pokemons>
+    func fetchPokemonCard(with id: String) -> Single<Pokemon>
+}
+
+class CardsNetworkServiceImpl {
     
     let provider: MoyaProvider<PokemonsAPI>
     
@@ -19,7 +24,10 @@ class CardsNetworkServiceImpl: Domain.CardsNetworkServiceProtocol {
             APITokenPlugin()
         ])
     }
-    
+}
+
+extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
+
     func fetchPokemonCards() -> Single<Pokemons> {
         return provider.rx.request(.cards)
             .filterSuccessfulStatusCodes()
