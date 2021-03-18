@@ -33,6 +33,7 @@ end
 
 def core_pods
     pod "Networking", :path => "Modules/Networking"
+    pod "Models", :path => "Modules/Models"
 end
 
 target 'EducationalProject' do

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.1)
   - Differentiator (4.0.1)
+  - Models (0.0.1)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -40,6 +41,7 @@ PODS:
   - Swinject (2.7.1)
 
 DEPENDENCIES:
+  - Models (from `Modules/Models`)
   - Moya
   - Moya/RxSwift
   - Networking (from `Modules/Networking`)
@@ -68,12 +70,15 @@ SPEC REPOS:
     - Swinject
 
 EXTERNAL SOURCES:
+  Models:
+    :path: Modules/Models
   Networking:
     :path: Modules/Networking
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Models: 2f12bb961aee823e0800a98ca9c2e82ea9d68836
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Networking: 80fc20e124231b7788cc13fd49283a06b390a52a
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -86,6 +91,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: cb0668760a33b705e78f0c548d0e3b058d5f032a
+PODFILE CHECKSUM: 352f20c3499f471a4bfc987dabcc27b8748ebae1
 
 COCOAPODS: 1.10.1
