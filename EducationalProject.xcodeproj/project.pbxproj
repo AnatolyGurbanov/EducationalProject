@@ -50,8 +50,6 @@
 		5373E80825FF60640099D23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5373E84A25FF89050099D23F /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		5373E84B25FF89050099D23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5373E89125FFA5980099D23F /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
-		5373E89525FFA7570099D23F /* Pokemons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemons.swift; sourceTree = "<group>"; };
 		5373E8AC25FFB0160099D23F /* CardsNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsNetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		A328CA4A4BB173FFFCD3D1F1 /* Pods-EducationalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationalProject.release.xcconfig"; path = "Target Support Files/Pods-EducationalProject/Pods-EducationalProject.release.xcconfig"; sourceTree = "<group>"; };
 		EEEDDAE26C9F25D333D88EB4 /* Pods_EducationalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducationalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,21 +182,11 @@
 				53038B002601E9CB00003493 /* Common */,
 				5303899A2600F69000003493 /* Assembly */,
 				530389982600F68100003493 /* UseCases */,
-				5373E89025FFA5890099D23F /* Entries */,
 				5373E8A525FFAF5C0099D23F /* Services */,
 				5373E84A25FF89050099D23F /* Domain.h */,
 				5373E84B25FF89050099D23F /* Info.plist */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		5373E89025FFA5890099D23F /* Entries */ = {
-			isa = PBXGroup;
-			children = (
-				5373E89125FFA5980099D23F /* Pokemon.swift */,
-				5373E89525FFA7570099D23F /* Pokemons.swift */,
-			);
-			path = Entries;
 			sourceTree = "<group>";
 		};
 		5373E8A525FFAF5C0099D23F /* Services */ = {
