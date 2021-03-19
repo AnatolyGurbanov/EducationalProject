@@ -32,8 +32,9 @@ def snapkit
 end
 
 def core_pods
-    pod "Networking", :path => "Modules/Networking"
-    pod "Models", :path => "Modules/Models"
+    pod "Networking", :path => ".Modules/Networking"
+    pod "Models", :path => ".Modules/Models"
+    pod "Constants", :path => ".Modules/Constants"
 end
 
 target 'EducationalProject' do
