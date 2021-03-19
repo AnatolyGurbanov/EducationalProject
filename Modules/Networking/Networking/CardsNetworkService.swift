@@ -8,7 +8,7 @@ public protocol CardsNetworkServiceProtocol {
     func fetchPokemonCard(with id: String) -> Single<Pokemon>
 }
 
-private final class CardsNetworkServiceImpl {
+final class CardsNetworkServiceImpl {
     
     let provider: MoyaProvider<PokemonsAPI>
     
