@@ -1,10 +1,3 @@
-//
-//  Pokemon.swift
-//  Domain
-//
-//  Created by Anatoly Gurbanov on 15.03.2021.
-//
-
 import Foundation
 
 // MARK: - Pokemon

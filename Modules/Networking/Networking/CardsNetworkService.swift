@@ -1,11 +1,4 @@
-//
-//  CardsNetworkService.swift
-//  Networking
-//
-//  Created by Anatoly Gurbanov on 16.03.2021.
-//
-
-import Domain
+import Models
 import Foundation
 import Moya
 import RxSwift
@@ -15,14 +8,12 @@ public protocol CardsNetworkServiceProtocol {
     func fetchPokemonCard(with id: String) -> Single<Pokemon>
 }
 
-class CardsNetworkServiceImpl {
+private final class CardsNetworkServiceImpl {
     
     let provider: MoyaProvider<PokemonsAPI>
     
     init() {
-        self.provider = MoyaProvider<PokemonsAPI>(plugins: [
-            APITokenPlugin()
-        ])
+        self.provider = MoyaProvider<PokemonsAPI>()
     }
 }
 
@@ -31,8 +22,8 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
     func fetchPokemonCards() -> Single<Pokemons> {
         return provider.rx.request(.cards)
             .filterSuccessfulStatusCodes()
-            .map(Domain.Pokemons.self)
-            .map { response -> Domain.Pokemons in
+            .map(Pokemons.self)
+            .map { response -> Pokemons in
                 return response
             }
             .do(onSuccess: { items in
@@ -45,8 +36,8 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
     func fetchPokemonCard(with id: String) -> Single<Pokemon> {
         return provider.rx.request(.cardsID(id: id))
             .filterSuccessfulStatusCodes()
-            .map(Domain.Pokemon.self)
-            .map { response -> Domain.Pokemon in
+            .map(Pokemon.self)
+            .map { response -> Pokemon in
                 return response
             }
             .do(onSuccess: { item in

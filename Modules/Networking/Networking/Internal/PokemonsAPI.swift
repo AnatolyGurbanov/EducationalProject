@@ -1,10 +1,3 @@
-//
-//  API.swift
-//  Networking
-//
-//  Created by Anatoly Gurbanov on 15.03.2021.
-//
-
 import Foundation
 import Moya
 
@@ -47,7 +40,7 @@ extension PokemonsAPI: TargetType {
     }
 
     var headers: [String : String]? {
-        nil
+        ["X-Api-Key": Constants.apiPrivateKey]
     }
 
 }

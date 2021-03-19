@@ -16,4 +16,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'RxSwift'
   spec.dependency 'Moya/RxSwift'
   spec.dependency 'Moya'
+  spec.dependency 'Swinject'
+  ##
+  spec.dependency 'Models'
 end
