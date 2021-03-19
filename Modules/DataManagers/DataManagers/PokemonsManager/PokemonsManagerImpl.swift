@@ -12,10 +12,10 @@ final class PokemonsManagerImpl: PokemonsManager {
     }
 
     func fetchPokemonCards() -> Single<Pokemons> {
-        
+        provider.fetchPokemonCard()
     }
 
     func fetchPokemonCard(with id: String) -> Single<Pokemon> {
-
+        provider.fetchPokemonCards()
     }
 }
