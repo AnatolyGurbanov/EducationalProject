@@ -26,11 +26,7 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
             .map { response -> Pokemons in
                 return response
             }
-            .do(onSuccess: { items in
-                print("items:", items)
-            }, onError: {
-                print("error:", $0)
-            })
+            .catchError(ErrorHandler.handleError)
     }
     
     func fetchPokemonCard(with id: String) -> Single<Pokemon> {
@@ -40,10 +36,6 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
             .map { response -> Pokemon in
                 return response
             }
-            .do(onSuccess: { item in
-                print("pokemon's name:", item.name)
-            }, onError: {
-                print("error:", $0)
-            })
+            .catchError(ErrorHandler.handleError)
     }
 }
