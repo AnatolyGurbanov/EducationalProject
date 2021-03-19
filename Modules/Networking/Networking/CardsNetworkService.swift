@@ -10,7 +10,7 @@ public protocol CardsNetworkServiceProtocol {
 
 final class CardsNetworkServiceImpl {
     
-    let provider: MoyaProvider<PokemonsAPI>
+    private let provider: MoyaProvider<PokemonsAPI>
     
     init() {
         self.provider = MoyaProvider<PokemonsAPI>()

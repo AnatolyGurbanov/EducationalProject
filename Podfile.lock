@@ -1,6 +1,10 @@
 PODS:
   - Alamofire (5.4.1)
   - Constants (0.0.1)
+  - DataManagers (0.0.1):
+    - Models
+    - Networking
+    - RxSwift
   - Differentiator (4.0.1)
   - Models (0.0.1)
   - Moya (14.0.0):
@@ -46,6 +50,7 @@ PODS:
 
 DEPENDENCIES:
   - Constants (from `Modules/Constants`)
+  - DataManagers (from `Modules/DataManagers`)
   - Models (from `Modules/Models`)
   - Moya
   - Moya/RxSwift
@@ -77,6 +82,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Constants:
     :path: Modules/Constants
+  DataManagers:
+    :path: Modules/DataManagers
   Models:
     :path: Modules/Models
   Networking:
@@ -85,6 +92,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Constants: 5de9f2b82518a037b105d102c679e053b8c9856b
+  DataManagers: 6eb8fb49269f8744ca27eefb9e0c9dbb9599fa58
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Models: 2f12bb961aee823e0800a98ca9c2e82ea9d68836
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
@@ -99,6 +107,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 5e07575893338ef750ab127a33251c730ba03e3c
+PODFILE CHECKSUM: d08fe103f9752f2306704d0388bf45225566d9ef
 
 COCOAPODS: 1.10.1

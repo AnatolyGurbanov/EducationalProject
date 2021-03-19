@@ -35,6 +35,7 @@ def core_pods
     pod "Networking", :path => "Modules/Networking"
     pod "Models", :path => "Modules/Models"
     pod "Constants", :path => "Modules/Constants"
+    pod "DataManagers", :path => "Modules/DataManagers"
 end
 
 target 'EducationalProject' do
