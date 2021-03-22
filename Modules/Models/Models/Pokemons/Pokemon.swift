@@ -30,7 +30,9 @@ public struct Pokemon: Decodable {
 // MARK: - Ability
 
 public struct Ability: Decodable {
-    public let name, text, type: String
+    public let name: String
+    public let text: String
+    public let type: String
 }
 
 // MARK: - Attack

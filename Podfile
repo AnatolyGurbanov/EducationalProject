@@ -1,4 +1,3 @@
-ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 platform :ios, '13.0'
 use_frameworks!
 inhibit_all_warnings!
@@ -30,6 +29,7 @@ def core_pods
     pod "Models", :path => "Modules/Models"
     pod "Constants", :path => "Modules/Constants"
     pod "DataManagers", :path => "Modules/DataManagers"
+    pod "Common", :path => "Modules/Common"
 end
 
 target 'EducationalProject' do
