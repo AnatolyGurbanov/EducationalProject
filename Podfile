@@ -25,6 +25,7 @@ def snapkit
 end
 
 def core_pods
+    pod "Common", :path => "Modules/Common"
     pod "Networking", :path => "Modules/Networking"
     pod "Models", :path => "Modules/Models"
     pod "Constants", :path => "Modules/Constants"
