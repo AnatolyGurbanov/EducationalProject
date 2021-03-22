@@ -1,8 +1,6 @@
 # DataManagers
 
-[![CI Status](https://img.shields.io/travis/Anatoly Gurbanov/DataManagers.svg?style=flat)](https://travis-ci.org/Anatoly Gurbanov/DataManagers)
 [![Version](https://img.shields.io/cocoapods/v/DataManagers.svg?style=flat)](https://cocoapods.org/pods/DataManagers)
-[![License](https://img.shields.io/cocoapods/l/DataManagers.svg?style=flat)](https://cocoapods.org/pods/DataManagers)
 [![Platform](https://img.shields.io/cocoapods/p/DataManagers.svg?style=flat)](https://cocoapods.org/pods/DataManagers)
 
 ## Example
