@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,7 @@
 		5373E80225FF60630099D23F /* EducationalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5373E80025FF60630099D23F /* EducationalProject.xcdatamodeld */; };
 		5373E80425FF60640099D23F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5373E80325FF60640099D23F /* Assets.xcassets */; };
 		5373E80725FF60640099D23F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5373E80525FF60640099D23F /* LaunchScreen.storyboard */; };
-		57EA843F4B17491AB2FF19F6 /* Pods_EducationalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE06D67192931E0CB470427B /* Pods_EducationalProject.framework */; };
+		B1B334CE3AF8AF806594DD54 /* Pods_EducationalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E87279BCE8ED05F5F710365 /* Pods_EducationalProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +29,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		154BE6D98E30021C32B0139F /* Pods-EducationalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationalProject.debug.xcconfig"; path = "Target Support Files/Pods-EducationalProject/Pods-EducationalProject.debug.xcconfig"; sourceTree = "<group>"; };
-		530389A02600FA6D00003493 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
-		530389BA260100BB00003493 /* PokeCardsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCardsUseCase.swift; sourceTree = "<group>"; };
-		53038B022601E9F000003493 /* Container+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Helper.swift"; sourceTree = "<group>"; };
+		2E87279BCE8ED05F5F710365 /* Pods_EducationalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducationalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FA682A6A7E0BAB69816BA62 /* Pods-EducationalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationalProject.debug.xcconfig"; path = "Target Support Files/Pods-EducationalProject/Pods-EducationalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		5373E7F425FF60630099D23F /* EducationalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EducationalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5373E7F725FF60630099D23F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5373E7F925FF60630099D23F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,10 +38,7 @@
 		5373E80325FF60640099D23F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5373E80625FF60640099D23F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5373E80825FF60640099D23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5373E84A25FF89050099D23F /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
-		5373E84B25FF89050099D23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0F59ED6F7304A7C5E604583 /* Pods-EducationalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationalProject.release.xcconfig"; path = "Target Support Files/Pods-EducationalProject/Pods-EducationalProject.release.xcconfig"; sourceTree = "<group>"; };
-		DE06D67192931E0CB470427B /* Pods_EducationalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EducationalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA8E5D8ADA4062860E40984 /* Pods-EducationalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EducationalProject.release.xcconfig"; path = "Target Support Files/Pods-EducationalProject/Pods-EducationalProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57EA843F4B17491AB2FF19F6 /* Pods_EducationalProject.framework in Frameworks */,
+				B1B334CE3AF8AF806594DD54 /* Pods_EducationalProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,18 +56,10 @@
 		1C8EBAEB0AA5F4F7BD7481F4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				154BE6D98E30021C32B0139F /* Pods-EducationalProject.debug.xcconfig */,
-				B0F59ED6F7304A7C5E604583 /* Pods-EducationalProject.release.xcconfig */,
+				2FA682A6A7E0BAB69816BA62 /* Pods-EducationalProject.debug.xcconfig */,
+				ADA8E5D8ADA4062860E40984 /* Pods-EducationalProject.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		2507EBBC799637B939635CEF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DE06D67192931E0CB470427B /* Pods_EducationalProject.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		530389912600F56500003493 /* Application */ = {
@@ -84,23 +71,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		530389982600F68100003493 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				530389992600F68800003493 /* UseCaseProvider */,
-				530389BA260100BB00003493 /* PokeCardsUseCase.swift */,
-			);
-			path = UseCases;
-			sourceTree = "<group>";
-		};
-		530389992600F68800003493 /* UseCaseProvider */ = {
-			isa = PBXGroup;
-			children = (
-				530389A02600FA6D00003493 /* UseCaseProvider.swift */,
-			);
-			path = UseCaseProvider;
-			sourceTree = "<group>";
-		};
 		5303899D2600F8FB00003493 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,22 +78,6 @@
 				5373BFEE2608C54E00D6CF9B /* LaunchScreen */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		53038B002601E9CB00003493 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				53038B012601E9D200003493 /* Extensions */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		53038B012601E9D200003493 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				53038B022601E9F000003493 /* Container+Helper.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5373BFEE2608C54E00D6CF9B /* LaunchScreen */ = {
@@ -138,10 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				5373E7F625FF60630099D23F /* EducationalProject */,
-				5373E84925FF89050099D23F /* Domain */,
 				5373E7F525FF60630099D23F /* Products */,
 				1C8EBAEB0AA5F4F7BD7481F4 /* Pods */,
-				2507EBBC799637B939635CEF /* Frameworks */,
+				C7B92547072DFCA6A9AB23F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,15 +117,12 @@
 			path = EducationalProject;
 			sourceTree = "<group>";
 		};
-		5373E84925FF89050099D23F /* Domain */ = {
+		C7B92547072DFCA6A9AB23F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53038B002601E9CB00003493 /* Common */,
-				530389982600F68100003493 /* UseCases */,
-				5373E84A25FF89050099D23F /* Domain.h */,
-				5373E84B25FF89050099D23F /* Info.plist */,
+				2E87279BCE8ED05F5F710365 /* Pods_EducationalProject.framework */,
 			);
-			path = Domain;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,12 +132,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5373E80B25FF60640099D23F /* Build configuration list for PBXNativeTarget "EducationalProject" */;
 			buildPhases = (
-				2A12035B00C1929EA200807D /* [CP] Check Pods Manifest.lock */,
+				7128CE83D15B7C1867C9B718 /* [CP] Check Pods Manifest.lock */,
 				5373E7F025FF60630099D23F /* Sources */,
 				5373E7F125FF60630099D23F /* Frameworks */,
 				5373E7F225FF60630099D23F /* Resources */,
 				5373E9752600B29F0099D23F /* Embed Frameworks */,
-				A80E67BCD915985FCBD20DC2 /* [CP] Embed Pods Frameworks */,
+				0F2E66D95E4F503BE7B5C8EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,7 +193,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A12035B00C1929EA200807D /* [CP] Check Pods Manifest.lock */ = {
+		0F2E66D95E4F503BE7B5C8EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EducationalProject/Pods-EducationalProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EducationalProject/Pods-EducationalProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EducationalProject/Pods-EducationalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7128CE83D15B7C1867C9B718 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,23 +230,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A80E67BCD915985FCBD20DC2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EducationalProject/Pods-EducationalProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EducationalProject/Pods-EducationalProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EducationalProject/Pods-EducationalProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -427,7 +377,7 @@
 		};
 		5373E80C25FF60640099D23F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 154BE6D98E30021C32B0139F /* Pods-EducationalProject.debug.xcconfig */;
+			baseConfigurationReference = 2FA682A6A7E0BAB69816BA62 /* Pods-EducationalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,7 +397,7 @@
 		};
 		5373E80D25FF60640099D23F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0F59ED6F7304A7C5E604583 /* Pods-EducationalProject.release.xcconfig */;
+			baseConfigurationReference = ADA8E5D8ADA4062860E40984 /* Pods-EducationalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
