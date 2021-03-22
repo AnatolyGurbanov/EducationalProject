@@ -3,12 +3,6 @@ platform :ios, '13.0'
 use_frameworks!
 inhibit_all_warnings!
 
-install! 'cocoapods',
-:deterministic_uuids => false,
-:clean => true,
-:disable_input_output_paths => true,
-:warn_for_unused_master_specs_repo => false
-
 def external_pods
   use_frameworks!
   # Rx
@@ -36,11 +30,11 @@ def core_pods
     pod "Models", :path => "Modules/Models"
     pod "Constants", :path => "Modules/Constants"
     pod "DataManagers", :path => "Modules/DataManagers"
+    pod "Common", :path => "Modules/Common"
 end
 
 target 'EducationalProject' do
   use_frameworks!
-  inherit! :search_paths
   core_pods
   external_pods
   swinject
