@@ -1,10 +1,5 @@
 PODS:
   - Alamofire (5.4.1)
-  - Common (0.0.1):
-    - Differentiator
-    - RxCocoa
-    - RxDataSources
-    - RxSwift
   - Constants (0.0.1)
   - DataManagers (0.0.1):
     - Models
@@ -54,7 +49,6 @@ PODS:
   - Swinject (2.7.1)
 
 DEPENDENCIES:
-  - Common (from `Modules/Common`)
   - Constants (from `Modules/Constants`)
   - DataManagers (from `Modules/DataManagers`)
   - Models (from `Modules/Models`)
@@ -86,8 +80,6 @@ SPEC REPOS:
     - Swinject
 
 EXTERNAL SOURCES:
-  Common:
-    :path: Modules/Common
   Constants:
     :path: Modules/Constants
   DataManagers:
@@ -99,7 +91,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  Common: 399529bcc064046f1101f7bb3168e133f2c5f4e1
   Constants: a7e3ad5d857042cd0e77cdaefa7d3bc56528e1c1
   DataManagers: e582cdefd8856c953e80df67a371910601e14dff
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
@@ -116,6 +107,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 48c06bf98f76f5b614a5a4a475e7c9e654396d9d
+PODFILE CHECKSUM: 6ac80557a7ff659008b288a61b65b5ab59500894
 
 COCOAPODS: 1.10.1
