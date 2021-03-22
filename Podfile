@@ -29,7 +29,6 @@ def core_pods
     pod "Models", :path => "Modules/Models"
     pod "Constants", :path => "Modules/Constants"
     pod "DataManagers", :path => "Modules/DataManagers"
-    pod "Common", :path => "Modules/Common"
 end
 
 target 'EducationalProject' do
