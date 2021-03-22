@@ -11,8 +11,8 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "11.0"
   spec.swift_version = "5.0"
   spec.source       = { :path => "." }
-  spec.source_files  = "DataManagers/**/*.{h,m,swift,xib}"
-  spec.frameworks = "Foundation", "UIKit"
+  spec.source_files  = "DataManagers/**/*.swift"
+  spec.frameworks = "Foundation"
   spec.dependency "RxSwift"
   ##
   spec.dependency 'Networking'

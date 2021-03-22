@@ -1,5 +1,4 @@
 import Models
-import Foundation
 import Moya
 import RxSwift
 
@@ -23,9 +22,6 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
         return provider.rx.request(.cards)
             .filterSuccessfulStatusCodes()
             .map(Pokemons.self)
-            .map { response -> Pokemons in
-                return response
-            }
             .catchError(ErrorHandler.handleError)
     }
     
@@ -33,9 +29,6 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
         return provider.rx.request(.cardsID(id: id))
             .filterSuccessfulStatusCodes()
             .map(Pokemon.self)
-            .map { response -> Pokemon in
-                return response
-            }
             .catchError(ErrorHandler.handleError)
     }
 }

@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "11.0"
   spec.swift_version = "5.0"
   spec.source       = { :path => "." }
-  spec.source_files  = "Models/**/*.{h,m,swift,xib}"
-  spec.frameworks = "Foundation", "UIKit"
+  spec.source_files  = "Models/**/*.swift"
+  spec.frameworks = "Foundation"
 end
 

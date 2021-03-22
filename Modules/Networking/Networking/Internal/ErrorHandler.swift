@@ -30,7 +30,7 @@ enum ErrorHandler {
 
         case .statusCode(let response) where response.statusCode == 401:
             return Errors.Network.unauthorized
-            
+
         default:
             return Errors.Network.networkError(error.localizedDescription)
         }
@@ -44,14 +44,16 @@ enum ErrorHandler {
             return Errors.Network.noInternet
         }
 
-        if (error as NSError).domain == NSURLErrorDomain {
-            if [NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost].contains((error as NSError).code) {
+        let nserror = error as NSError
+
+        if nserror.domain == NSURLErrorDomain {
+            if [NSURLErrorCannotConnectToHost, NSURLErrorNetworkConnectionLost].contains((nserror).code) {
                 return Errors.Network.serverUnavailable
             }
             return Errors.Network.networkError(error.localizedDescription)
         }
 
-        if (error as NSError).domain == kCFErrorDomainCFNetwork as String {
+        if nserror.domain == kCFErrorDomainCFNetwork as String {
             return Errors.Network.serverUnavailable
         }
 

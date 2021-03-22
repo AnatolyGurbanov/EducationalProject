@@ -12,7 +12,7 @@ extension PokemonsAPI: TargetType {
     var baseURL: URL {
         URL(string: "https://api.pokemontcg.io/v2")!
     }
-    
+
     var path: String {
         switch self {
         case .cards:
@@ -21,12 +21,9 @@ extension PokemonsAPI: TargetType {
             return "/cards/\(id)"
         }
     }
-    
+
     var method: Moya.Method {
-        switch self {
-        default:
-            return .get
-        }
+        .get
     }
 
     var sampleData: Data {
@@ -34,10 +31,7 @@ extension PokemonsAPI: TargetType {
     }
 
     var task: Task {
-        switch self {
-        default:
-            return .requestPlain
-        }
+        .requestPlain
     }
 
     var headers: [String : String]? {

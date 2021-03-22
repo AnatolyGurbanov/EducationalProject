@@ -3,8 +3,8 @@ import Foundation
 public extension Swift.Error {
     public func asDomain() -> Error {
         switch self {
-        case let domainErr as Error:
-            return domainErr
+        case let domainError as Error:
+            return domainError
 
         default:
             return Errors.CommonError.swiftError(self)
@@ -21,7 +21,7 @@ public enum Errors {
     /// Общие ошибки
     public enum CommonError: Error {
         /// Неизвестная ошибка
-        case unkown
+        case unknown
         /// Системная ошибка
         case systemError(String)
         /// Неизвестная swift ошибка

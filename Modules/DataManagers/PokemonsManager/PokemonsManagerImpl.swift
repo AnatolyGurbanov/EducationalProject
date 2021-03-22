@@ -1,4 +1,3 @@
-import Foundation
 import RxSwift
 import Models
 import Networking
@@ -12,10 +11,10 @@ final class PokemonsManagerImpl: PokemonsManager {
     }
 
     func fetchPokemonCards() -> Single<Pokemons> {
-        provider.fetchPokemonCard()
+        provider.fetchPokemonCards()
     }
 
     func fetchPokemonCard(with id: String) -> Single<Pokemon> {
-        provider.fetchPokemonCards()
+        provider.fetchPokemonCard(with: id)
     }
 }

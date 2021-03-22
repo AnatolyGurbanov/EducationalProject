@@ -45,35 +45,44 @@ public struct Attack: Decodable {
 // MARK: - Set
 
 public struct Set: Decodable {
-    public let id, name, series: String
-    public let printedTotal, total: Int
+    public let id: String
+    public let name: String
+    public let series: String
+    public let printedTotal: Int
+    public let total: Int
     public let legalities: Legalities
-    public let ptcgoCode, releaseDate, updatedAt: String
+    public let ptcgoCode: String
+    public let releaseDate: String
+    public let updatedAt: String
     public let images: SetImages
 }
 
 // MARK: - SetImages
 
 public struct SetImages: Decodable {
-    public let symbol, logo: String
+    public let symbol: String
+    public let logo: String
 }
 
 // MARK: - Legalities
 
 public struct Legalities: Decodable {
-    public let unlimited, expanded: String
+    public let unlimited: String
+    public let expanded: String
 }
 
 // MARK: - DataImages
 
 public struct DataImages: Decodable  {
-    public let small, large: String
+    public let small: String
+    public let large: String
 }
 
 // MARK: - Resistance
 
 public struct Resistance: Decodable  {
-    public let type, value: String
+    public let type: String
+    public let value: String
 }
 
 // MARK: - Tcgplayer
@@ -87,11 +96,15 @@ public struct Tcgplayer: Decodable  {
 // MARK: - Prices
 
 public struct Prices: Decodable  {
-    public let holofoil, reverseHolofoil: Holofoil
+    public let holofoil: Holofoil
+    public let reverseHolofoil: Holofoil
 }
 
 // MARK: - Holofoil
 
 public struct Holofoil: Decodable  {
-    public let low, mid, high, market: Double
+    public let low: Double
+    public let mid: Double
+    public let high: Double
+    public let market: Double
 }

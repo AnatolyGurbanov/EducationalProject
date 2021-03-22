@@ -91,12 +91,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  Constants: 5de9f2b82518a037b105d102c679e053b8c9856b
-  DataManagers: 6eb8fb49269f8744ca27eefb9e0c9dbb9599fa58
+  Constants: a7e3ad5d857042cd0e77cdaefa7d3bc56528e1c1
+  DataManagers: e582cdefd8856c953e80df67a371910601e14dff
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  Models: 2f12bb961aee823e0800a98ca9c2e82ea9d68836
+  Models: 5d9ac489b7b4dc042493c848c6e31c0b18c502b3
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Networking: f201cde87de95faf08cce590a3d1ba1b53d71c3f
+  Networking: 15656ee9fec0ac949f34a21e158d0368dbc1bd8c
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
