@@ -17,4 +17,8 @@ final class PokemonsManagerImpl: PokemonsManager {
     func fetchPokemonCard(with id: String) -> Single<Pokemon> {
         provider.fetchPokemonCard(with: id)
     }
+    
+    func fetchPokemonCards(with name: String) -> Single<Pokemons> {
+        provider.fetchPokemonCards(with: name)
+    }
 }

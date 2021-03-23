@@ -5,6 +5,7 @@ import Moya
 enum PokemonsAPI {
     case cards
     case cardsID(id: String)
+    case cardsName(name: String)
 }
 
 extension PokemonsAPI: TargetType {
@@ -19,6 +20,8 @@ extension PokemonsAPI: TargetType {
             return "/cards"
         case .cardsID(let id):
             return "/cards/\(id)"
+        case .cardsName(let name):
+            return "/cards?q=name:\(name)"
         }
     }
 
