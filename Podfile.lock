@@ -1,0 +1,129 @@
+PODS:
+  - Alamofire (5.4.1)
+  - Common (0.0.1):
+    - Differentiator
+    - RxCocoa
+    - RxDataSources
+    - RxSwift
+  - Constants (0.0.1)
+  - DataManagers (0.0.1):
+    - Models
+    - Networking
+    - RxSwift
+  - Differentiator (4.0.1)
+  - Extensions (0.0.1):
+    - Common
+    - RxCocoa
+    - RxSwift
+  - Models (0.0.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - Networking (0.0.1):
+    - Constants
+    - Models
+    - Moya
+    - Moya/RxSwift
+    - RxSwift
+    - Swinject
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxFeedback (3.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.2)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - RxViewController (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - SnapKit (5.0.1)
+  - Swinject (2.7.1)
+
+DEPENDENCIES:
+  - Common (from `Modules/Common`)
+  - Constants (from `Modules/Constants`)
+  - DataManagers (from `Modules/DataManagers`)
+  - Extensions (from `Modules/Extensions`)
+  - Models (from `Modules/Models`)
+  - Moya
+  - Moya/RxSwift
+  - Networking (from `Modules/Networking`)
+  - RxCocoa
+  - RxDataSources
+  - RxFeedback
+  - RxSwift
+  - RxSwiftExt
+  - RxViewController
+  - SnapKit
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Differentiator
+    - Moya
+    - RxCocoa
+    - RxDataSources
+    - RxFeedback
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - RxViewController
+    - SnapKit
+    - Swinject
+
+EXTERNAL SOURCES:
+  Common:
+    :path: Modules/Common
+  Constants:
+    :path: Modules/Constants
+  DataManagers:
+    :path: Modules/DataManagers
+  Extensions:
+    :path: Modules/Extensions
+  Models:
+    :path: Modules/Models
+  Networking:
+    :path: Modules/Networking
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Common: 399529bcc064046f1101f7bb3168e133f2c5f4e1
+  Constants: a7e3ad5d857042cd0e77cdaefa7d3bc56528e1c1
+  DataManagers: e582cdefd8856c953e80df67a371910601e14dff
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Extensions: 77d905a69f70c6532c3a54b6230241743c41a663
+  Models: 5d9ac489b7b4dc042493c848c6e31c0b18c502b3
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Networking: 15656ee9fec0ac949f34a21e158d0368dbc1bd8c
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+
+PODFILE CHECKSUM: 2a96defe5a3a760ccf768a8bd4d6c6d5a003a7e7
+
+COCOAPODS: 1.10.1

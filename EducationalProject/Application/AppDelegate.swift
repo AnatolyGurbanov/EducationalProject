@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  EducationalProject
-//
-//  Created by Anatoly Gurbanov on 15.03.2021.
-//
-
 import UIKit
 import CoreData
 
