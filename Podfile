@@ -33,9 +33,14 @@ def core_pods
     pod "Networking", :path => "Modules/Networking"
 end
 
+def scenes_pods
+    pod "PokemonsListScene", :path => "Modules/PokemonsListScene"
+end
+
 target 'EducationalProject' do
   use_frameworks!
   core_pods
+  scenes_pods
   external_pods
   swinject
   snapkit
