@@ -72,16 +72,21 @@ PODS:
     - RxSwift (~> 5.0)
   - SnapKit (5.0.1)
   - Swinject (2.7.1)
+  - UseCases (0.0.1):
+    - DataManagers
+    - Models
+    - Networking
+    - RxSwift
 
 DEPENDENCIES:
-  - Common (from `Modules/Common`)
-  - Constants (from `Modules/Constants`)
-  - DataManagers (from `Modules/DataManagers`)
-  - Extensions (from `Modules/Extensions`)
-  - Models (from `Modules/Models`)
+  - Common (from `./Modules/Common`)
+  - Constants (from `./Modules/Constants`)
+  - DataManagers (from `./Modules/DataManagers`)
+  - Extensions (from `./Modules/Extensions`)
+  - Models (from `./Modules/Models`)
   - Moya
   - Moya/RxSwift
-  - Networking (from `Modules/Networking`)
+  - Networking (from `./Modules/Networking`)
   - PokemonsListScene (from `Modules/PokemonsListScene`)
   - RxCocoa
   - RxDataSources
@@ -91,6 +96,7 @@ DEPENDENCIES:
   - RxViewController
   - SnapKit
   - Swinject
+  - UseCases (from `./Modules/UseCases`)
 
 SPEC REPOS:
   trunk:
@@ -111,19 +117,21 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Common:
-    :path: Modules/Common
+    :path: "./Modules/Common"
   Constants:
-    :path: Modules/Constants
+    :path: "./Modules/Constants"
   DataManagers:
-    :path: Modules/DataManagers
+    :path: "./Modules/DataManagers"
   Extensions:
-    :path: Modules/Extensions
+    :path: "./Modules/Extensions"
   Models:
-    :path: Modules/Models
+    :path: "./Modules/Models"
   Networking:
-    :path: Modules/Networking
+    :path: "./Modules/Networking"
   PokemonsListScene:
     :path: Modules/PokemonsListScene
+  UseCases:
+    :path: "./Modules/UseCases"
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
@@ -147,7 +155,8 @@ SPEC CHECKSUMS:
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  UseCases: c027d0b281f9dc3e64ef1ca5d717ac4c485fb062
 
-PODFILE CHECKSUM: 0143b422255cc4ed7183c4e1a1ae633384d7ce35
+PODFILE CHECKSUM: 9cee67fde7bf87a9992b08fed949e81c9eb5d41c
 
 COCOAPODS: 1.10.1
