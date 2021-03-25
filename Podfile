@@ -32,6 +32,7 @@ def core_pods
     pod "Models", :path => "./Modules/Models"
     pod "Networking", :path => "./Modules/Networking"
     pod "UseCases", :path => "./Modules/UseCases"
+    pod "Services", :path => "./Modules/Services"
 end
 
 def scenes_pods

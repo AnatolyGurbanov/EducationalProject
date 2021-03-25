@@ -33,11 +33,10 @@ PODS:
   - PokemonsListScene (0.0.1):
     - Common
     - Extensions
-    - RxDataSources
     - RxSwift
-    - RxSwiftExtensions
     - RxViewController
     - SnapKit
+    - UseCases
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -48,9 +47,6 @@ PODS:
   - RxFeedback (3.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - RxOptional (4.1.0):
-    - RxCocoa (~> 5)
-    - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.2)
@@ -62,21 +58,20 @@ PODS:
   - RxSwiftExt/RxCocoa (5.2.0):
     - RxCocoa (~> 5.0)
     - RxSwiftExt/Core
-  - RxSwiftExtensions (1.2.2):
-    - RxCocoa (>= 4.3)
-    - RxOptional (>= 3.5)
-    - RxSwift (>= 4.3)
-    - RxViewController
   - RxViewController (1.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
+  - Services (0.0.1):
+    - DataManagers
+    - Extensions
+    - Models
+    - RxSwift
   - SnapKit (5.0.1)
   - Swinject (2.7.1)
   - UseCases (0.0.1):
-    - DataManagers
     - Models
-    - Networking
     - RxSwift
+    - Services
 
 DEPENDENCIES:
   - Common (from `./Modules/Common`)
@@ -94,6 +89,7 @@ DEPENDENCIES:
   - RxSwift
   - RxSwiftExt
   - RxViewController
+  - Services (from `./Modules/Services`)
   - SnapKit
   - Swinject
   - UseCases (from `./Modules/UseCases`)
@@ -106,11 +102,9 @@ SPEC REPOS:
     - RxCocoa
     - RxDataSources
     - RxFeedback
-    - RxOptional
     - RxRelay
     - RxSwift
     - RxSwiftExt
-    - RxSwiftExtensions
     - RxViewController
     - SnapKit
     - Swinject
@@ -130,6 +124,8 @@ EXTERNAL SOURCES:
     :path: "./Modules/Networking"
   PokemonsListScene:
     :path: Modules/PokemonsListScene
+  Services:
+    :path: "./Modules/Services"
   UseCases:
     :path: "./Modules/UseCases"
 
@@ -143,20 +139,19 @@ SPEC CHECKSUMS:
   Models: 5d9ac489b7b4dc042493c848c6e31c0b18c502b3
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Networking: 15656ee9fec0ac949f34a21e158d0368dbc1bd8c
-  PokemonsListScene: fb0ba9dbeb30545dc5ddf80b88b6fa85ecf39403
+  PokemonsListScene: cb6cb1e9f05415e71cb916b2280f0cefd4bb65f0
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
-  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
-  RxSwiftExtensions: 55a489fc6b46a047646438b948a3ad65d9e4e63a
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
+  Services: 7a3550289d41da9e1687c8179de6fcf943b21a19
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
-  UseCases: c027d0b281f9dc3e64ef1ca5d717ac4c485fb062
+  UseCases: 2c967a63e45d0fb9589ed0034959d21e9f71fdfa
 
-PODFILE CHECKSUM: 9cee67fde7bf87a9992b08fed949e81c9eb5d41c
+PODFILE CHECKSUM: 784532f821f75f25c0e08e38e94759f6a7a37d37
 
 COCOAPODS: 1.10.1
