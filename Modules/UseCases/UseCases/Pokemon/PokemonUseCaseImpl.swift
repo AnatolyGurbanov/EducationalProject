@@ -1,13 +1,13 @@
-import DataManagers
 import Foundation
 import Models
 import RxSwift
+import Services
 
 public class PokemonUseCaseImpl: PokemonUseCase {
     
-    private let service: PokemonsManager
+    private let service: PokemonsServiceProtocol
     
-    init(service: PokemonsManager) {
+    init(service: PokemonsServiceProtocol) {
         self.service = service
     }
     

@@ -15,6 +15,6 @@ Pod::Spec.new do |spec|
     spec.frameworks = "Foundation", "UIKit"
     spec.dependency "RxSwift"
     spec.dependency "Models"
-    spec.dependency "Networking"
-    spec.dependency "DataManagers"
+    ##
+    spec.dependency "Services"
 end
