@@ -3,9 +3,9 @@ import Moya
 import RxSwift
 
 public protocol CardsNetworkServiceProtocol {
-    func fetchPokemonCards() -> Single<Pokemons>
+    func fetchPokemonCards() -> Single<[Pokemon]>
     func fetchPokemonCard(with id: String) -> Single<Pokemon>
-    func fetchPokemonCards(with name: String) -> Single<Pokemons>
+    func fetchPokemonCards(with name: String) -> Single<[Pokemon]>
     func fetchPokemonImage(with url: URL) -> Single<UIImage>
 }
 
@@ -20,11 +20,11 @@ final class CardsNetworkServiceImpl {
 
 extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
 
-    func fetchPokemonCards() -> Single<Pokemons> {
+    func fetchPokemonCards() -> Single<[Pokemon]> {
         return provider.rx.request(.cards)
             .filterSuccessfulStatusCodes()
             .map(PokemonsResponse.self)
-            .map { response -> Pokemons in
+            .map { response -> [Pokemon] in
                 return response.pokemons
                     .compactMap { pokemon -> Pokemon? in
                         return Pokemon(
@@ -51,12 +51,19 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
             .catchError(ErrorHandler.handleError)
     }
     
-    func fetchPokemonCards(with name: String) -> Single<Pokemons> {
+    func fetchPokemonCards(with name: String) -> Single<[Pokemon]> {
         return provider.rx.request(.cardsName(name: name))
             .filterSuccessfulStatusCodes()
             .map(PokemonsResponse.self)
-            .map {
-                
+            .map { response -> [Pokemon] in
+                return response.pokemons
+                    .compactMap { pokemon -> Pokemon? in
+                        return Pokemon(
+                            id: pokemon.id,
+                            name: pokemon.name,
+                            imageURL: pokemon.images.large
+                        )
+                    }
             }
             .catchError(ErrorHandler.handleError)
     }

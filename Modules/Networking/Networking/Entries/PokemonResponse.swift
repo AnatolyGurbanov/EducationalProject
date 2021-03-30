@@ -1,7 +1,7 @@
 import Foundation
 import Extensions
 
-// MARK: - Pokemon
+// MARK: - PokemonResponse
 
 struct PokemonResponse: Decodable {
      let id: String
