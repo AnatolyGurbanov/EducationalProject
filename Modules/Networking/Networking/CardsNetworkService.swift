@@ -6,6 +6,7 @@ public protocol CardsNetworkServiceProtocol {
     func fetchPokemonCards() -> Single<Pokemons>
     func fetchPokemonCard(with id: String) -> Single<Pokemon>
     func fetchPokemonCards(with name: String) -> Single<Pokemons>
+    func fetchPokemonImage(with url: URL) -> Single<UIImage>
 }
 
 final class CardsNetworkServiceImpl {
@@ -37,6 +38,12 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
         return provider.rx.request(.cardsName(name: name))
             .filterSuccessfulStatusCodes()
             .map(Pokemons.self)
+            .catchError(ErrorHandler.handleError)
+    }
+
+    func fetchPokemonImage(with url: URL) -> Single<UIImage> {
+        return provider.rx.request(.image(url: url))
+            .mapImage()
             .catchError(ErrorHandler.handleError)
     }
 }

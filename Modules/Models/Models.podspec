@@ -13,5 +13,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :path => "." }
   spec.source_files  = "Models/**/*.swift"
   spec.frameworks = "Foundation"
+  spec.dependency "Extensions"
 end
 

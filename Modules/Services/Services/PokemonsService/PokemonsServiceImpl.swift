@@ -5,10 +5,10 @@ import Models
 import RxSwift
 
 final class PokemonsServiceImpl: PokemonsServiceProtocol {
-    private let pokemonsManager: PokemonsManager
+    private let pokemonsManager: PokemonsManagerProtocol
     private let disposeBag = DisposeBag()
   
-    init(pokemonsManager: PokemonsManager) {
+    init(pokemonsManager: PokemonsManagerProtocol) {
         self.pokemonsManager = pokemonsManager
     }
 
@@ -23,6 +23,9 @@ final class PokemonsServiceImpl: PokemonsServiceProtocol {
 
     func fetchPokemonCards(with name: String) -> Single<Pokemons> {
         pokemonsManager.fetchPokemonCards(with: name)
-        
+    }
+    
+    func fetchPokemonImage(with url: URL) -> Single<UIImage> {
+        pokemonsManager.fetchPokemonImage(with: url)
     }
 }
