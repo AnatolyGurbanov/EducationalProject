@@ -2,7 +2,7 @@ import RxSwift
 import Models
 import Networking
 
-final class PokemonsManagerImpl: PokemonsManager {
+final class PokemonsManagerImpl: PokemonsManagerProtocol {
 
     private let provider: CardsNetworkServiceProtocol
     
@@ -20,5 +20,9 @@ final class PokemonsManagerImpl: PokemonsManager {
     
     func fetchPokemonCards(with name: String) -> Single<Pokemons> {
         provider.fetchPokemonCards(with: name)
+    }
+    
+    func fetchPokemonImage(with url: URL) -> Single<UIImage> {
+        provider.fetchPokemonImage(with: url)
     }
 }

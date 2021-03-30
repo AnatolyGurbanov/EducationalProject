@@ -1,7 +1,7 @@
 import Foundation
 
 public enum DataManagerProvider {
-    public static var pokemonsManager: PokemonsManager {
+    public static var pokemonsManager: PokemonsManagerProtocol {
         PokemonsManagerImpl()
     }
 }
