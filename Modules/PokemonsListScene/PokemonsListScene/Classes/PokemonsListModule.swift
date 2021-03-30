@@ -1,14 +1,14 @@
 import UIKit
+import UseCases
 
 public struct PokemonsListModule {
     public let view: UIViewController
     
-    public init(router: SomeRouter, transition: Transition?) {
-//        let useCase = SignInUseCaseImpl()
+    public init() {
+        let useCase = PokemonsListUseCaseImpl()
 
         let viewModelDependencies = PokemonsListViewModel.Dependencies(
-//            useCase: useCase,
-//            router: router
+            useCase: useCase
         )
         let viewModel = PokemonsListViewModel(dependencies: viewModelDependencies)
 
@@ -16,7 +16,7 @@ public struct PokemonsListModule {
             viewModel: viewModel
         )
 
-        let view = PokemonsListViewController
+        let view = PokemonsListViewController(dependencies: viewDependencies)
 
         self.view = view
     }

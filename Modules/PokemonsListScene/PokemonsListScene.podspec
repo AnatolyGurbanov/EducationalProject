@@ -13,7 +13,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :path => "." }
   spec.source_files  = "PokemonsListScene/**/*.swift"
   spec.frameworks = "Foundation", "UIKit"
-  spec.exclude_files = "PokemonsListScene/Exclude"
   spec.dependency "RxSwift"
   spec.dependency "RxViewController"
   spec.dependency "RxSwiftExtensions"
@@ -22,5 +21,6 @@ Pod::Spec.new do |spec|
   ##
   spec.dependency "Extensions"
   spec.dependency "Common"
+  spec.dependency "UseCases"
   
 end
