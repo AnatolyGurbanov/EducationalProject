@@ -15,7 +15,7 @@ enum PropsMapper {
 
     static func pokemonsCellProps(from pokemons: Pokemons) -> [GenericSection<PokemonCollectionViewCell.Props>]? {
         let items = pokemons.pokemons.map {
-            PokemonCollectionViewCell.Props(id: $0.name, image: $0.images.large)
+            PokemonCollectionViewCell.Props(id: $0.name, image: $0.image)
         }
 
         return [GenericSection(title: "contacts", items: items)]
