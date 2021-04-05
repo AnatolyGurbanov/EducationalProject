@@ -11,11 +11,11 @@ public class PokemonsListUseCaseImpl: PokemonsListUseCase {
         self.service = ServiceProvider.pokemonsService()
     }
     
-    public func fetchPokemons() -> Single<Pokemons> {
+    public func fetchPokemons() -> Single<[Pokemon]> {
         service.fetchPokemonCards()
     }
     
-    public func fetchPokemons(with name: String) -> Single<Pokemons> {
+    public func fetchPokemons(with name: String) -> Single<[Pokemon]> {
         service.fetchPokemonCards(with: name)
     }
 }

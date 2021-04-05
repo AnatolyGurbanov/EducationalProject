@@ -10,7 +10,7 @@ final class PokemonsManagerImpl: PokemonsManagerProtocol {
         self.provider = NetworkServiceProvider.cardsAPIService
     }
 
-    func fetchPokemonCards() -> Single<Pokemons> {
+    func fetchPokemonCards() -> Single<[Pokemon]> {
         provider.fetchPokemonCards()
     }
 
@@ -18,7 +18,7 @@ final class PokemonsManagerImpl: PokemonsManagerProtocol {
         provider.fetchPokemonCard(with: id)
     }
     
-    func fetchPokemonCards(with name: String) -> Single<Pokemons> {
+    func fetchPokemonCards(with name: String) -> Single<[Pokemon]> {
         provider.fetchPokemonCards(with: name)
     }
     

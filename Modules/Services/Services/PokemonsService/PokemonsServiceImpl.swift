@@ -12,7 +12,7 @@ final class PokemonsServiceImpl: PokemonsServiceProtocol {
         self.pokemonsManager = pokemonsManager
     }
 
-    func fetchPokemonCards() -> Single<Pokemons> {
+    func fetchPokemonCards() -> Single<[Pokemon]> {
         pokemonsManager.fetchPokemonCards()
     }
 
@@ -21,7 +21,7 @@ final class PokemonsServiceImpl: PokemonsServiceProtocol {
         
     }
 
-    func fetchPokemonCards(with name: String) -> Single<Pokemons> {
+    func fetchPokemonCards(with name: String) -> Single<[Pokemon]> {
         pokemonsManager.fetchPokemonCards(with: name)
     }
     

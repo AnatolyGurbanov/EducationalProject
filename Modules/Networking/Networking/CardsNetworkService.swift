@@ -23,16 +23,15 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
     func fetchPokemonCards() -> Single<[Pokemon]> {
         return provider.rx.request(.cards)
             .filterSuccessfulStatusCodes()
-            .map(PokemonsResponse.self)
-            .map { response -> [Pokemon] in
-                return response.pokemons
-                    .compactMap { pokemon -> Pokemon? in
-                        return Pokemon(
-                            id: pokemon.id,
-                            name: pokemon.name,
-                            imageURL: pokemon.images.large
-                        )
-                    }
+            .map([PokemonResponse].self, atKeyPath: "data", using: JSONDecoder())
+            .map { pokemons in
+                pokemons.map {
+                    Pokemon(
+                        id: $0.id,
+                        name: $0.name,
+                        imageURL: $0.images.large
+                    )
+                }
             }
             .catchError(ErrorHandler.handleError)
     }
@@ -54,16 +53,15 @@ extension CardsNetworkServiceImpl: CardsNetworkServiceProtocol {
     func fetchPokemonCards(with name: String) -> Single<[Pokemon]> {
         return provider.rx.request(.cardsName(name: name))
             .filterSuccessfulStatusCodes()
-            .map(PokemonsResponse.self)
-            .map { response -> [Pokemon] in
-                return response.pokemons
-                    .compactMap { pokemon -> Pokemon? in
-                        return Pokemon(
-                            id: pokemon.id,
-                            name: pokemon.name,
-                            imageURL: pokemon.images.large
-                        )
-                    }
+            .map([PokemonResponse].self, atKeyPath: "data", using: JSONDecoder())
+            .map { pokemons in
+                pokemons.map {
+                    Pokemon(
+                        id: $0.id,
+                        name: $0.name,
+                        imageURL: $0.images.large
+                    )
+                }
             }
             .catchError(ErrorHandler.handleError)
     }
