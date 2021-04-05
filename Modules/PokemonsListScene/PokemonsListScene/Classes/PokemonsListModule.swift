@@ -5,11 +5,14 @@ public struct PokemonsListModule {
     public let view: UIViewController
     
     public init() {
-        let useCase = PokemonsListUseCaseImpl()
+        let pokemonsListUseCase = PokemonsListUseCaseImpl()
+        let pokemonUseCase = PokemonUseCaseImpl()
 
         let viewModelDependencies = PokemonsListViewModel.Dependencies(
-            useCase: useCase
+            useCase: pokemonsListUseCase,
+            cellViewModelUseCase: pokemonUseCase
         )
+        
         let viewModel = PokemonsListViewModel(dependencies: viewModelDependencies)
 
         let viewDependencies = PokemonsListViewController.Dependencies(

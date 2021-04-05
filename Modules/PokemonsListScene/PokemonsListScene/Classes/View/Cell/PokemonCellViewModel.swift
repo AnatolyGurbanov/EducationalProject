@@ -1,34 +1,64 @@
 import Common
+import Extensions
+import Models
 import RxCocoa
 import RxDataSources
+import UseCases
 
-final class PokemonCellViewModel: ClassName {
-    // MARK: Props
-    struct Props: Equatable {
-        let id: String
-        let image: UIImage
+
+final class PokemonCellViewModel: ViewModel, Equatable {
+    static func == (lhs: PokemonCellViewModel, rhs: PokemonCellViewModel) -> Bool {
+        lhs.pokemon.id == rhs.pokemon.id
     }
     
-    let props: Props
     
-    init(props: Props) {
-        self.props = props
+    struct Props: Equatable {
+        var id: String
+        var name: String
+        var image: URLString
+    }
+
+    private let pokemon: Props
+    private let useCase: PokemonUseCase
+
+    init(pokemon: Props, dependencies: Dependencies) {
+        self.pokemon = pokemon
+        self.useCase = dependencies.useCase
     }
     
     func transform(_ input: PokemonCellViewModel.Input, outputHandler: (PokemonCellViewModel.Output) -> Void) {
-        let props = Driver.just(props)
+        let name = Driver.just(pokemon.name)
+        let id = Driver.just(pokemon.id)
         
-        let output = Output(props: props)
+        guard let imageURL = pokemon.image.url else {
+            return
+        }
         
+        let image = useCase.fetchPokemonImage(with: imageURL)
+            .asDriver(onErrorJustReturn: UIImage(named: "placeholder")!)
+
+        let output = Output(
+            name: name,
+            id: id,
+            image: image
+        )
+
         outputHandler(output)
     }
 }
 
 extension PokemonCellViewModel {
-    struct Input {
-        
+    struct Dependencies {
+        let useCase: PokemonUseCase
     }
+
+    struct Input {
+
+    }
+
     struct Output {
-        let props: Driver<Props>
+        let name: Driver<String>
+        let id: Driver<String>
+        let image: Driver<UIImage>
     }
 }

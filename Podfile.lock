@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.1)
+  - Alamofire (5.4.2)
   - Common (0.0.1):
     - Differentiator
     - RxCocoa
@@ -36,7 +36,6 @@ PODS:
     - Extensions
     - RxDataSources
     - RxSwift
-    - RxSwiftExtensions
     - RxViewController
     - SnapKit
     - UseCases
@@ -50,9 +49,6 @@ PODS:
   - RxFeedback (3.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - RxOptional (4.1.0):
-    - RxCocoa (~> 5)
-    - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.2)
@@ -64,11 +60,6 @@ PODS:
   - RxSwiftExt/RxCocoa (5.2.0):
     - RxCocoa (~> 5.0)
     - RxSwiftExt/Core
-  - RxSwiftExtensions (1.2.2):
-    - RxCocoa (>= 4.3)
-    - RxOptional (>= 3.5)
-    - RxSwift (>= 4.3)
-    - RxViewController
   - RxViewController (1.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
@@ -113,11 +104,9 @@ SPEC REPOS:
     - RxCocoa
     - RxDataSources
     - RxFeedback
-    - RxOptional
     - RxRelay
     - RxSwift
     - RxSwiftExt
-    - RxSwiftExtensions
     - RxViewController
     - SnapKit
     - Swinject
@@ -143,29 +132,27 @@ EXTERNAL SOURCES:
     :path: "./Modules/UseCases"
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  Common: 399529bcc064046f1101f7bb3168e133f2c5f4e1
-  Constants: a7e3ad5d857042cd0e77cdaefa7d3bc56528e1c1
-  DataManagers: e582cdefd8856c953e80df67a371910601e14dff
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  Common: bb87307996b0e579375c97d3784202fbb83e73d3
+  Constants: b5b98c7d7543298bc02000599ba9a0571f83f748
+  DataManagers: ec7e6a90fb46b0152c2f4cbfd29e873aef8a0b10
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  Extensions: 77d905a69f70c6532c3a54b6230241743c41a663
-  Models: 592d7ba9a2cd7e5a1ba730833dfa44c51e90fe01
+  Extensions: 15d39c9b46eeb7182d404ccb2a35dbfadff817f2
+  Models: c2f24564c39ab906e87ce21cd17b2a140586e7bc
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Networking: 15656ee9fec0ac949f34a21e158d0368dbc1bd8c
-  PokemonsListScene: 69ab3c8c9cec96bcce9c161889b91f6d14003386
+  Networking: 1cebf9f7023a83713bdbf059fa48a45f54e6de41
+  PokemonsListScene: 6de014fca225e2f8ba7198401752217ebf3760aa
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxFeedback: 4260d8dad5bba28b182c0b9ff5bce68c260de183
-  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
-  RxSwiftExtensions: 55a489fc6b46a047646438b948a3ad65d9e4e63a
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
-  Services: 7a3550289d41da9e1687c8179de6fcf943b21a19
+  Services: c66a798aefd7242902cb193342934a1ddc09b7d2
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
-  UseCases: 2c967a63e45d0fb9589ed0034959d21e9f71fdfa
+  UseCases: c4ad15cbf40d244aa42915a88c460fefb7cc04c6
 
 PODFILE CHECKSUM: 784532f821f75f25c0e08e38e94759f6a7a37d37
 

@@ -26,7 +26,7 @@ final class PokemonsListViewController: UIViewController {
         return collectionView
     }
     
-    private lazy var dataSource = makeTableViewDataSource()
+    private lazy var dataSource = makeCollectionViewDataSource()
     
     // MARK: - Initialize
 
@@ -95,11 +95,11 @@ private extension PokemonsListViewController {
             .disposed(by: bag)
     }
 
-    func makeTableViewDataSource() -> RxCollectionSectionWrapper<GenericSection<PokemonCollectionViewCell.Props>> {
-        let dataSource = RxCollectionSectionWrapper<GenericSection<PokemonCollectionViewCell.Props>>(
+    func makeCollectionViewDataSource() -> RxCollectionSectionWrapper<GenericSection<PokemonCellViewModel>> {
+        let dataSource = RxCollectionSectionWrapper<GenericSection<PokemonCellViewModel>>(
             configureCell: { _, collectionView, indexPath, item -> UICollectionViewCell in
                 let cell = collectionView.dequeueReusableCell(ofType: PokemonCollectionViewCell.self, at: indexPath)
-                cell.render(props: item)
+                cell.render(with: item)
                 return cell
             }
         )
@@ -112,7 +112,7 @@ private extension PokemonsListViewController {
 extension PokemonsListViewController {
     enum Props: Equatable {
         case none
-        case pokemons([GenericSection<PokemonCollectionViewCell.Props>])
+        case pokemon([GenericSection<PokemonCellViewModel.Props>])
     }
     
     // MARK: Render
@@ -121,7 +121,7 @@ extension PokemonsListViewController {
         self.props = props
 
         switch props {
-        case .pokemons(let pokemonsProps):
+        case .pokemon(let pokemonsProps):
             Observable.just(pokemonsProps)
                 .bind(to: collectionView.rx.items(dataSource: dataSource))
                 .disposed(by: disposeBag)
