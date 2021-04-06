@@ -23,7 +23,10 @@ final class PokemonsListViewModel {
         let props = pokemons
             .asObservable()
             .map(makeCellViewModels)
-//            .wrappedInEmptySection()
+            .map { pokemons -> PokemonsListViewController.Props in
+                return PropsMapper.map(from: pokemons)
+            }
+            .distinctUntilChanged()
         
         input.loadTrigger
             .drive(onNext: { [moduleUseCase] _ in
@@ -66,7 +69,7 @@ extension PokemonsListViewModel {
     }
 
     struct Output {
-        let props: Observable<[PokemonsListViewController.Props]>
+        let props: Observable<PokemonsListViewController.Props>
     }
 }
 

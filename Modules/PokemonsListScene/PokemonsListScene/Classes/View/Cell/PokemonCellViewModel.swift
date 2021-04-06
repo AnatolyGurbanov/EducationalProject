@@ -7,10 +7,6 @@ import UseCases
 
 
 final class PokemonCellViewModel: ViewModel, Equatable {
-    static func == (lhs: PokemonCellViewModel, rhs: PokemonCellViewModel) -> Bool {
-        lhs.pokemon.id == rhs.pokemon.id
-    }
-    
     
     struct Props: Equatable {
         var id: String
@@ -35,7 +31,7 @@ final class PokemonCellViewModel: ViewModel, Equatable {
         }
         
         let image = useCase.fetchPokemonImage(with: imageURL)
-            .asDriver(onErrorJustReturn: UIImage(named: "placeholder")!)
+            .asDriver(onErrorJustReturn: UIImage(named: "contacts")!)
 
         let output = Output(
             name: name,
@@ -44,6 +40,10 @@ final class PokemonCellViewModel: ViewModel, Equatable {
         )
 
         outputHandler(output)
+    }
+    
+    static func == (lhs: PokemonCellViewModel, rhs: PokemonCellViewModel) -> Bool {
+        lhs.pokemon.id == rhs.pokemon.id
     }
 }
 

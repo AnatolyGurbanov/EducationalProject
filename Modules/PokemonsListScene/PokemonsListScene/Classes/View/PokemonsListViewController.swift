@@ -13,7 +13,7 @@ final class PokemonsListViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
     private let viewModel: PokemonsListViewModel!
-    
+
     // MARK: - Variables
     
     var props = Props.none
@@ -21,6 +21,8 @@ final class PokemonsListViewController: UIViewController {
     private var collectionView: UICollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.4, height: UIScreen.main.bounds.height / 4)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -61,7 +63,7 @@ final class PokemonsListViewController: UIViewController {
     
     func setupInput(input: PokemonsListViewModel.Output) {
         input.props
-            .subscribe(onNext: { [weak self] in self?.render(props: $0) })
+            .subscribe(onNext: { [weak self] item in self?.render(props: item) })
             .disposed(by: disposeBag)
     }
 }
@@ -99,7 +101,9 @@ private extension PokemonsListViewController {
         let dataSource = RxCollectionSectionWrapper<GenericSection<PokemonCellViewModel>>(
             configureCell: { _, collectionView, indexPath, item -> UICollectionViewCell in
                 let cell = collectionView.dequeueReusableCell(ofType: PokemonCollectionViewCell.self, at: indexPath)
-                cell.render(with: item)
+                item.transform(.init()) { output in
+                    cell.render(with: output)
+                }
                 return cell
             }
         )
@@ -112,7 +116,7 @@ private extension PokemonsListViewController {
 extension PokemonsListViewController {
     enum Props: Equatable {
         case none
-        case pokemon([GenericSection<PokemonCellViewModel.Props>])
+        case pokemon([GenericSection<PokemonCellViewModel>])
     }
     
     // MARK: Render

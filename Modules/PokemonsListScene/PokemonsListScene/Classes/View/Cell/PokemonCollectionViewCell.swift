@@ -53,13 +53,16 @@ final class PokemonCollectionViewCell: UICollectionViewCell, ClassName {
         configureImageViewConstraints()
     }
     
-    func render(with viewModel: PokemonCellViewModel) {
-//        viewModel.image
-//            .drive(cellImageView.rx.image)
-//            .disposed(by: reuseBag)
-//        viewModel.name
-//            .drive(pokemonNameLabel.rx.text)
-//            .disposed(by: reuseBag)
+    func render(with viewModel: PokemonCellViewModel.Output) {
+        viewModel.image
+            .drive(cellImageView.rx.image)
+            .disposed(by: reuseBag)
+        viewModel.name
+            .drive(pokemonNameLabel.rx.text)
+            .disposed(by: reuseBag)
+        viewModel.image
+            .drive(cellImageView.rx.image)
+            .disposed(by: reuseBag)
     }
 }
 
