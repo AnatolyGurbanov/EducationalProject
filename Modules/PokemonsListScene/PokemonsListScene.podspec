@@ -8,10 +8,14 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://65apps.com"
   spec.license      = "BSD"
   spec.author       = { "Anatoly Gurbanov" => "agurbanov@65apps.com" }
-  spec.platform     = :ios, "12.0"
+  spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
   spec.source       = { :path => "." }
-  spec.source_files  = "PokemonsListScene/**/*.swift"
+  spec.source_files  = "PokemonsListScene/**/*.{swift,xsassets}"
+  spec.frameworks = "Foundation", "UIKit"
+  spec.resource_bundles = {
+    'PokemonsListScene' => ['PokemonsListScene/Resources/**/*.{xsassets,pdf}']
+  }
   spec.frameworks = "Foundation", "UIKit"
   spec.dependency "RxSwift"
   spec.dependency "RxViewController"
@@ -21,5 +25,6 @@ Pod::Spec.new do |spec|
   spec.dependency "Extensions"
   spec.dependency "Common"
   spec.dependency "UseCases"
+  spec.dependency "Routing"
   
 end

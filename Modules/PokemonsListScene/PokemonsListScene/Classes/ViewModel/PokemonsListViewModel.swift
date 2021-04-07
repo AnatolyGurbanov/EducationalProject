@@ -10,10 +10,12 @@ import UseCases
 final class PokemonsListViewModel {
     private let moduleUseCase: PokemonsListUseCase
     private let cellViewModelUseCase: PokemonUseCase
+    private let router: PokemonsListRouter
 
     init(dependencies: Dependencies) {
         moduleUseCase = dependencies.useCase
         cellViewModelUseCase = dependencies.cellViewModelUseCase
+        router = dependencies.router
     }
 
     func transform(_ input: Input, outputHandler: (Output) -> Void) {
@@ -61,6 +63,7 @@ extension PokemonsListViewModel {
     struct Dependencies {
         let useCase: PokemonsListUseCase
         let cellViewModelUseCase: PokemonUseCase
+        let router: PokemonsListRouter
     }
 
     struct Input {

@@ -33,10 +33,12 @@ def core_pods
     pod "Networking", :path => "./Modules/Networking"
     pod "UseCases", :path => "./Modules/UseCases"
     pod "Services", :path => "./Modules/Services"
+    pod "Routing", :path => "./Modules/Routing"
+    pod "ScenesCoordinator", :path => "./Modules/ScenesCoordinator"
 end
 
 def scenes_pods
-    pod "PokemonsListScene", :path => "Modules/PokemonsListScene"
+    pod "PokemonsListScene", :path => "./Modules/PokemonsListScene"
 end
 
 target 'EducationalProject' do
