@@ -32,10 +32,10 @@ final class PokemonsListViewController: UIViewController {
     
     // MARK: - Initialize
 
-    init(dependencies: Dependencies) {
+    required init(dependencies: Dependencies) {
         self.viewModel = dependencies.viewModel
         let bundle = Bundle(for: Self.self)
-        super.init(nibName: String(describing: Self.self), bundle: bundle)
+        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {
@@ -46,9 +46,14 @@ final class PokemonsListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         configureCollectionView()
         setupCollectionView(collectionView, delegate: dataSource, bag: disposeBag)
         setupOutput()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     func setupOutput() {
@@ -75,10 +80,15 @@ final class PokemonsListViewController: UIViewController {
 private extension PokemonsListViewController {
     
     func configureCollectionView() {
-        self.view.addSubview(collectionView)
-        collectionView.backgroundColor = .clear
-        collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        if let superView = self.view {
+            
+            superView.addSubview(collectionView)
+            
+            collectionView.backgroundColor = .clear
+            collectionView.snp.makeConstraints { make in
+                make.height.equalTo(superView.bounds.height)
+                make.width.equalTo(superView.bounds.width)
+            }
         }
     }
     
