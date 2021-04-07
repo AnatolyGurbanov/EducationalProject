@@ -34,7 +34,8 @@ final class PokemonsListViewController: UIViewController {
 
     init(dependencies: Dependencies) {
         self.viewModel = dependencies.viewModel
-        super.init(nibName: nil, bundle: nil)
+        let bundle = Bundle(for: Self.self)
+        super.init(nibName: String(describing: Self.self), bundle: bundle)
     }
 
     required init?(coder: NSCoder) {
@@ -42,11 +43,12 @@ final class PokemonsListViewController: UIViewController {
     }
     
     // MARK: - Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
         setupCollectionView(collectionView, delegate: dataSource, bag: disposeBag)
+        setupOutput()
     }
     
     func setupOutput() {
