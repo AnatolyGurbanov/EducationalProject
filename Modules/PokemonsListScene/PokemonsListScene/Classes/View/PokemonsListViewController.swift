@@ -102,8 +102,8 @@ private extension PokemonsListViewController {
             
         self.collectionView.backgroundColor = .clear
         self.collectionView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(44.0)
-            make.bottom.equalToSuperview().inset(16.0)
+            make.top.equalToSuperview().inset(16.0)
+            make.bottom.equalToSuperview()
             make.trailing.equalToSuperview().inset(4.0)
             make.leading.equalToSuperview().inset(4.0)
         }
