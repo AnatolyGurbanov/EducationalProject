@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.homepage     = "https://65apps.com"
     spec.license      = "BSD"
     spec.author       = { "Anatoly Gurbanov" => "agurbanov@65apps.com" }
-    spec.platform     = :ios, "12.0"
+    spec.platform     = :ios, "13.0"
     spec.swift_version = "5.0"
     spec.source       = { :path => "." }
     spec.source_files  = "UseCases/**/*.swift"
