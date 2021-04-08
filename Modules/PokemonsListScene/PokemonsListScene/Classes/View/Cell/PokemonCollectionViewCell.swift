@@ -7,44 +7,38 @@ import UIKit
 
 final class PokemonCollectionViewCell: UICollectionViewCell, ClassName {
 
-    // MARK: - Properties
-    
+    // MARK: - Variables
+
     private var reuseBag = DisposeBag()
 
-    // MARK: - Variables
-    
     private var pokemonID: String = ""
     private var name: String = ""
     
     private var cellImageView: UIImageView!
     private var pokemonNameLabel: UILabel!
+    private var customView: UIView!
     
     // MARK: - Initialization
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configureCell()
+        configureImageViewConstraints()
+        configureLabelConstratints()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-//        configureImageViewConstraints()
-//        configureLabelConstratints()
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         reuseBag = DisposeBag()
+        let defaultImage = UIImage.image(name: "pokeball", for: Self.self)
+        cellImageView.image = defaultImage
     }
     
     func render(with viewModel: PokemonCellViewModel.Output) {
-        self.backgroundColor = .systemBlue
-        configureImageViewConstraints()
-        configureLabelConstratints()
-
         viewModel.image
             .drive(cellImageView.rx.image)
             .disposed(by: reuseBag)
@@ -57,6 +51,26 @@ final class PokemonCollectionViewCell: UICollectionViewCell, ClassName {
 // MARK: - Configuration
 
 private extension PokemonCollectionViewCell {
+    
+    func configureCell() {
+        let view = UIView()
+        view.backgroundColor = .white
+        customView = view
+        addSubview(customView)
+        
+        customView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(0)
+        }
+
+        customView.layer.shadowColor = UIColor.gray.cgColor
+        customView.layer.shadowRadius = 5.0
+        customView.layer.shadowOpacity = 1.0
+        customView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        customView.layer.masksToBounds = false
+        
+        customView.layer.cornerRadius = 5.0
+
+    }
 
     func configureImageViewConstraints() {
 
@@ -64,38 +78,31 @@ private extension PokemonCollectionViewCell {
         imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .clear
         cellImageView = imageView
-        addSubview(cellImageView)
+        customView.addSubview(cellImageView)
 
         cellImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(8)
-            make.trailing.equalToSuperview().offset(8)
-            make.leading.equalToSuperview().offset(8)
+            make.top.equalTo(customView).inset(8)
+            make.trailing.equalTo(customView).inset(8).priority(1000)
+            make.leading.equalTo(customView).inset(8).priority(1000)
+            make.centerX.equalTo(customView)
         }
     }
     
     func configureLabelConstratints() {
 
         let label = UILabel()
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        label.textAlignment = .left
-        label.tintColor = .black
+        label.numberOfLines = 1
+        label.lineBreakMode = .byTruncatingTail
+        label.textAlignment = .justified
+        label.textColor = .black
         pokemonNameLabel = label
-        addSubview(pokemonNameLabel)
+        customView.addSubview(pokemonNameLabel)
 
         pokemonNameLabel.snp.makeConstraints { make in
             make.top.equalTo(cellImageView.snp.bottom).offset(8).priority(1000)
-            make.bottom.equalToSuperview().offset(8)
-            make.trailing.equalToSuperview().offset(8)
-            make.leading.equalToSuperview().offset(8)
+            make.bottom.equalTo(customView).inset(8).priority(1000)
+            make.trailing.equalTo(cellImageView.snp.trailing).inset(8).priority(1000)
+            make.leading.equalTo(customView).inset(8)
         }
-    }
-}
-
-// MARK: - DI
-
-extension PokemonCollectionViewCell {
-    public struct Dependencies {
-        let viewModel: PokemonCellViewModel!
     }
 }

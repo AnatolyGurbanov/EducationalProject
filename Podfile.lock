@@ -11,7 +11,7 @@ PODS:
     - Networking
     - RxSwift
   - Differentiator (4.0.1)
-  - Extensions (0.0.1):
+  - Extensions (0.0.2):
     - Common
     - RxCocoa
     - RxSwift
@@ -145,15 +145,15 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
-  Common: bb87307996b0e579375c97d3784202fbb83e73d3
-  Constants: b5b98c7d7543298bc02000599ba9a0571f83f748
-  DataManagers: ec7e6a90fb46b0152c2f4cbfd29e873aef8a0b10
+  Common: 8e1b83adc7d0fa1b15ed54121c833b74470017bd
+  Constants: 05411257124c1ede0b4efa46f81b9c535aeaf664
+  DataManagers: 180903c68fc9dbf3244bc48a3128a6a93c3c77c0
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  Extensions: 15d39c9b46eeb7182d404ccb2a35dbfadff817f2
-  Models: c2f24564c39ab906e87ce21cd17b2a140586e7bc
+  Extensions: 644e121b4afe36bcc2e4d94a2764a2e49e4023c5
+  Models: df594e345da28221e8938aed017b9fcb89171011
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Networking: 1cebf9f7023a83713bdbf059fa48a45f54e6de41
-  PokemonsListScene: 7f912f67a11dd504f0ec6221630e22ef7e878949
+  Networking: 39a04f5de0284784cc07697968a7e92eb19f419e
+  PokemonsListScene: 876aee3daf0f2c9313163f60322a3f2a87eb5ab4
   Routing: 7426d8c424ba3e05c5b6554ab934a78f8a252e71
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
@@ -163,10 +163,10 @@ SPEC CHECKSUMS:
   RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
   ScenesCoordinator: ed009fdff88045bb299d11a0b6967a5f8691e9af
-  Services: c66a798aefd7242902cb193342934a1ddc09b7d2
+  Services: 60c69e52d19281d91373d2bc036c3ef2767049b5
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
-  UseCases: c4ad15cbf40d244aa42915a88c460fefb7cc04c6
+  UseCases: 82385700ebc7ce3a45cc26fd23c9d396b628d087
 
 PODFILE CHECKSUM: 5fdcd65cce2b548fb6a4c3d99fc5f53e216b30da
 

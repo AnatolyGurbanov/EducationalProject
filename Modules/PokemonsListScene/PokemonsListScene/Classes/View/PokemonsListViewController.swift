@@ -19,6 +19,7 @@ final class PokemonsListViewController: UIViewController {
     var props = Props.none
 
     private var collectionView: UICollectionView!
+    private var activityIndicator: UIActivityIndicatorView!
     
     private lazy var dataSource = makeCollectionViewDataSource()
     
@@ -39,6 +40,7 @@ final class PokemonsListViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         configureCollectionView()
+        configureActivityIndicator()
         setupCollectionView(collectionView, delegate: dataSource, bag: disposeBag)
         setupOutput()
     }
@@ -70,20 +72,35 @@ final class PokemonsListViewController: UIViewController {
 
 private extension PokemonsListViewController {
     
+    func configureActivityIndicator() {
+        
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.color = .systemRed
+        indicator.hidesWhenStopped = true
+        activityIndicator = indicator
+        self.view.addSubview(activityIndicator)
+        
+        activityIndicator.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        
+        activityIndicator.startAnimating()
+    }
+    
     func configureCollectionView() {
 
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.4, height: UIScreen.main.bounds.height / 4)
-        layout.minimumLineSpacing = 5.0
+        layout.sectionInset = UIEdgeInsets(top: 10.0, left: 24.0, bottom: 10.0, right: 24.0)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.4, height: UIScreen.main.bounds.height / 3.8)
+        layout.minimumLineSpacing = 16.0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         self.collectionView = collectionView
             
         self.view.addSubview(self.collectionView)
             
-        self.collectionView.backgroundColor = .systemRed
+        self.collectionView.backgroundColor = .clear
         self.collectionView.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(44.0)
             make.bottom.equalToSuperview().inset(16.0)
@@ -145,6 +162,8 @@ extension PokemonsListViewController {
             break
             
         }
+        
+        activityIndicator.stopAnimating()
     }
 }
 

@@ -31,7 +31,7 @@ final class PokemonCellViewModel: ViewModel, Equatable {
         }
         
         let image = useCase.fetchPokemonImage(with: imageURL)
-            .asDriver(onErrorJustReturn: UIImage())
+            .asDriver(onErrorJustReturn: UIImage.image(name: "pokeball", for: Self.self))
 
         let output = Output(
             name: name,
