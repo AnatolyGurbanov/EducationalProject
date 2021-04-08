@@ -11,12 +11,11 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
   spec.source       = { :path => "." }
-  spec.source_files  = "PokemonsListScene/**/*.{swift,xsassets}"
+  spec.source_files  = "PokemonsListScene/**/*.swift"
   spec.frameworks = "Foundation", "UIKit"
-  spec.resource_bundles = {
-    'PokemonsListScene' => ['PokemonsListScene/Resources/**/*.{xsassets,pdf}']
-  }
+  spec.resources  = "PokemonsListScene/Resources/*.{xcassets}"
   spec.frameworks = "Foundation", "UIKit"
+  ## dependencies
   spec.dependency "RxSwift"
   spec.dependency "RxViewController"
   spec.dependency "RxDataSources"

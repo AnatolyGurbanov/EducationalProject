@@ -18,15 +18,7 @@ final class PokemonsListViewController: UIViewController {
     
     var props = Props.none
 
-    private var collectionView: UICollectionView {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 0.0, left: 10.0, bottom: 0.0, right: 10.0)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.4, height: UIScreen.main.bounds.height / 4)
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        return collectionView
-    }
+    private var collectionView: UICollectionView!
     
     private lazy var dataSource = makeCollectionViewDataSource()
     
@@ -34,7 +26,6 @@ final class PokemonsListViewController: UIViewController {
 
     required init(dependencies: Dependencies) {
         self.viewModel = dependencies.viewModel
-        let bundle = Bundle(for: Self.self)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -80,15 +71,24 @@ final class PokemonsListViewController: UIViewController {
 private extension PokemonsListViewController {
     
     func configureCollectionView() {
-        if let superView = self.view {
+
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.sectionInset = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width * 0.4, height: UIScreen.main.bounds.height / 4)
+        layout.minimumLineSpacing = 5.0
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        self.collectionView = collectionView
             
-            superView.addSubview(collectionView)
+        self.view.addSubview(self.collectionView)
             
-            collectionView.backgroundColor = .clear
-            collectionView.snp.makeConstraints { make in
-                make.height.equalTo(superView.bounds.height)
-                make.width.equalTo(superView.bounds.width)
-            }
+        self.collectionView.backgroundColor = .systemRed
+        self.collectionView.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(44.0)
+            make.bottom.equalToSuperview().inset(16.0)
+            make.trailing.equalToSuperview().inset(4.0)
+            make.leading.equalToSuperview().inset(4.0)
         }
     }
     

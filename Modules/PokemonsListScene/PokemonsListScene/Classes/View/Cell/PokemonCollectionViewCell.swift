@@ -10,58 +10,46 @@ final class PokemonCollectionViewCell: UICollectionViewCell, ClassName {
     // MARK: - Properties
     
     private var reuseBag = DisposeBag()
-    private let viewModel: PokemonCellViewModel!
 
     // MARK: - Variables
     
     private var pokemonID: String = ""
     private var name: String = ""
-    private var cellImageView: UIImageView {
-        var image = UIImageView(frame: .zero)
-        image.contentMode = .scaleAspectFit
-        image.backgroundColor = .clear
-        return image
-    }
     
-    private var pokemonNameLabel: UILabel {
-        var label = UILabel(frame: .zero)
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        label.textAlignment = .left
-        label.tintColor = .black
-        return label
-    }
+    private var cellImageView: UIImageView!
+    private var pokemonNameLabel: UILabel!
     
-    // MARK: - Initialize
+    // MARK: - Initialization
 
-    init(dependencies: Dependencies) {
-        self.viewModel = dependencies.viewModel
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
+//        configureImageViewConstraints()
+//        configureLabelConstratints()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         reuseBag = DisposeBag()
-        configureImageViewConstraints()
     }
     
     func render(with viewModel: PokemonCellViewModel.Output) {
+        self.backgroundColor = .systemBlue
+        configureImageViewConstraints()
+        configureLabelConstratints()
+
         viewModel.image
             .drive(cellImageView.rx.image)
             .disposed(by: reuseBag)
         viewModel.name
             .drive(pokemonNameLabel.rx.text)
-            .disposed(by: reuseBag)
-        viewModel.image
-            .drive(cellImageView.rx.image)
             .disposed(by: reuseBag)
     }
 }
@@ -71,6 +59,13 @@ final class PokemonCollectionViewCell: UICollectionViewCell, ClassName {
 private extension PokemonCollectionViewCell {
 
     func configureImageViewConstraints() {
+
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .clear
+        cellImageView = imageView
+        addSubview(cellImageView)
+
         cellImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(8)
             make.trailing.equalToSuperview().offset(8)
@@ -79,8 +74,17 @@ private extension PokemonCollectionViewCell {
     }
     
     func configureLabelConstratints() {
+
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.textAlignment = .left
+        label.tintColor = .black
+        pokemonNameLabel = label
+        addSubview(pokemonNameLabel)
+
         pokemonNameLabel.snp.makeConstraints { make in
-            make.top.equalTo(cellImageView).offset(8).priority(1000)
+            make.top.equalTo(cellImageView.snp.bottom).offset(8).priority(1000)
             make.bottom.equalToSuperview().offset(8)
             make.trailing.equalToSuperview().offset(8)
             make.leading.equalToSuperview().offset(8)
