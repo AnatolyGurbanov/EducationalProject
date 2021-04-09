@@ -25,17 +25,26 @@ def snapkit
 end
 
 def core_pods
-    pod "Common", :path => "Modules/Common"
-    pod "Constants", :path => "Modules/Constants"
-    pod "DataManagers", :path => "Modules/DataManagers"
-    pod "Extensions", :path => "Modules/Extensions"
-    pod "Models", :path => "Modules/Models"
-    pod "Networking", :path => "Modules/Networking"
+    pod "Common", :path => "./Modules/Common"
+    pod "Constants", :path => "./Modules/Constants"
+    pod "DataManagers", :path => "./Modules/DataManagers"
+    pod "Extensions", :path => "./Modules/Extensions"
+    pod "Models", :path => "./Modules/Models"
+    pod "Networking", :path => "./Modules/Networking"
+    pod "UseCases", :path => "./Modules/UseCases"
+    pod "Services", :path => "./Modules/Services"
+    pod "Routing", :path => "./Modules/Routing"
+    pod "ScenesCoordinator", :path => "./Modules/ScenesCoordinator"
+end
+
+def scenes_pods
+    pod "PokemonsListScene", :path => "./Modules/PokemonsListScene"
 end
 
 target 'EducationalProject' do
   use_frameworks!
   core_pods
+  scenes_pods
   external_pods
   swinject
   snapkit

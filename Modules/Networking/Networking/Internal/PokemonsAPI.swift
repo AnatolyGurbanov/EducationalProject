@@ -5,12 +5,19 @@ import Moya
 enum PokemonsAPI {
     case cards
     case cardsID(id: String)
+    case cardsName(name: String)
+    case image(url: URL)
 }
 
 extension PokemonsAPI: TargetType {
 
     var baseURL: URL {
-        URL(string: "https://api.pokemontcg.io/v2")!
+        switch self {
+        case .image(let url):
+            return url
+        default:
+            return URL(string: "https://api.pokemontcg.io/v2")!
+        }
     }
 
     var path: String {
@@ -19,6 +26,10 @@ extension PokemonsAPI: TargetType {
             return "/cards"
         case .cardsID(let id):
             return "/cards/\(id)"
+        case .cardsName(let name):
+            return "/cards?q=name:\(name)"
+        default:
+            return ""
         }
     }
 

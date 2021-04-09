@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "Extensions"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "Extensions"
   spec.description  = <<-DESC
       Extensions feature module
@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://65apps.com"
   spec.license      = "BSD"
   spec.author       = { "Anatoly Gurbanov" => "agurbanov@65apps.com" }
-  spec.platform     = :ios, "11.0"
+  spec.platform     = :ios, "13.0"
   spec.swift_version = "5.0"
   spec.source       = { :path => "." }
   spec.source_files  = "Extensions/**/*.swift"
